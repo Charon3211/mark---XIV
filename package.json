@@ -1,0 +1,9 @@
+{
+  "name": "pulse-workout-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free single-page workout tracker",
+  "scripts": {
+    "start": "python -m http.server 8080"
+  }
+}

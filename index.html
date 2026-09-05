@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b0d10" />
+  <meta name="description" content="A smooth, single-page 7-day workout tracker with local progress persistence." />
+  <title>Pulse — Workout Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">P</div>
+        <div>
+          <div class="brand-name">PULSE</div>
+          <div class="brand-subtitle">Training log</div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="ghost-button" id="resetWeekBtn" type="button" title="Reset all saved progress">
+          <span>Reset week</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow" id="todayLabel">TODAY</p>
+          <h1 id="dayTitle">Push</h1>
+          <p class="hero-description" id="dayDescription">Pressing strength, shoulders and triceps.</p>
+        </div>
+
+        <div class="weekly-progress-card" aria-label="Weekly progress">
+          <div class="progress-card-top">
+            <span>Weekly progress</span>
+            <strong id="weeklyProgressText">0%</strong>
+          </div>
+          <div class="progress-track large">
+            <div class="progress-fill" id="weeklyProgressBar"></div>
+          </div>
+          <div class="progress-foot">
+            <span id="weeklyProgressDetail">0 of 7 days complete</span>
+            <span id="weekBadge">MON–SUN</span>
+          </div>
+        </div>
+      </section>
+
+      <nav class="day-nav" aria-label="Weekly workout days" id="dayNav"></nav>
+
+      <section class="session-meta">
+        <div>
+          <span class="section-kicker">SESSION</span>
+          <span class="session-count" id="sessionCount">0 / 5 exercises</span>
+        </div>
+        <div class="session-progress-wrap">
+          <div class="progress-track">
+            <div class="progress-fill" id="sessionProgressBar"></div>
+          </div>
+          <span class="session-percent" id="sessionPercent">0%</span>
+        </div>
+      </section>
+
+      <section class="workout-panel" aria-live="polite">
+        <div class="panel-head">
+          <div>
+            <span class="section-kicker">EXERCISES</span>
+            <h2 id="workoutHeading">Push day</h2>
+          </div>
+          <div class="panel-tip">Tap a set to log it</div>
+        </div>
+
+        <div class="exercise-list" id="exerciseList"></div>
+
+        <div class="complete-banner" id="completeBanner">
+          <div class="complete-icon" aria-hidden="true">✓</div>
+          <div>
+            <strong>Session complete</strong>
+            <span>Nice work. Your progress is saved automatically.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>Saved locally in this browser</span>
+      <span class="footer-dot" aria-hidden="true"></span>
+      <span id="saveStatus">Ready</span>
+    </footer>
+  </div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="celebration-layer" id="celebrationLayer" aria-hidden="true">
+    <div class="celebration-ring ring-1"></div>
+    <div class="celebration-ring ring-2"></div>
+    <div class="celebration-ring ring-3"></div>
+    <div class="celebration-check">✓</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
