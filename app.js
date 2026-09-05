@@ -76,13 +76,7 @@ const schedule = [
       ["Romanian Deadlift (Barbell)", 3, "8-10"],
       ["Leg Extension (Machine)", 3, "12-15"],
       ["Seated Calf Raise", 4, "12-20"],
-      ["Cable Crunch", 4, "12-15"],
-      ["DB Thrusters", 4, "15"],
-      ["DB Goblet Swings", 4, "20"],
-      ["Cable Woodchoppers (high-to-low, one side)", 4, "15 per side"],
-      ["Cable Pull-throughs", 4, "15"],
-      ["DB Renegade Row + Push-up", 4, "8 per side"],
-      ["DB Man-makers", 3, "8"]
+      ["Cable Crunch", 4, "12-15"]
     ]
   },
   {
